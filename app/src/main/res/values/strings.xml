@@ -2,7 +2,7 @@
     <string name="app_name">DC Comics</string>
     <string name="superman">Superman</string>
     <string name="nombre_superman">Clark Kent</string>
-    <string name="poderes_superman">Super fuerza, vuelo, invulnerabilidad, super velocidad, visión con calor, congelar, visión con rayos x"</string>
+    <string name="poderes_superman">Super fuerza, vuelo, invulnerabilidad, super velocidad, visión con calor, congelar, visión rayos x"</string>
     <string name="nombre">Nombre:</string>
     <string name="poderes">Poderes:</string>
 </resources>
