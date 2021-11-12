@@ -1,6 +1,8 @@
 package com.cubidevs.holaandroid
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
@@ -22,18 +24,37 @@ class RegistroSuperheroeActivity : AppCompatActivity() {
         val ciudadNacimientoSpinner: Spinner = findViewById(R.id.ciudad_nacimiento_spinner)
 
         registrarButton.setOnClickListener {
-            val nombre: String = nombreEditText.text.toString()
-            val estatura: Float = estaturaEditText.text.toString().toFloat()
-            var poderes = ""
-            val ciudadNacimiento = ciudadNacimientoSpinner.selectedItem.toString()
+            Log.d("Button","clicked")
 
-            val genero = if (masculinoRadioButton.isChecked) getString(R.string.masculino) else getString(R.string.femenino)
+            if (estaturaEditText.text.toString() == "")
+                estaturaEditText.error = "Digite estatura"
+            if (nombreEditText.text.isEmpty() || estaturaEditText.text.toString() == "" )
+                Toast.makeText(this,"Debe digitar el nombre y la estatura",Toast.LENGTH_LONG).show()
+            else {
+                val nombre: String = nombreEditText.text.toString()
+                val estatura: Float = estaturaEditText.text.toString().toFloat()
+                var poderes = ""
+                val ciudadNacimiento = ciudadNacimientoSpinner.selectedItem.toString()
 
-            if (fuerzaCheckBox.isChecked) poderes = getString(R.string.super_fuerza)
-            if (velocidadCheckBox.isChecked) poderes = poderes + " " + getString(R.string.velocidad)
-            if (telequinesisCheckBox.isChecked) poderes = poderes + " " + getString(R.string.telequinesis)
+                val genero =
+                    if (masculinoRadioButton.isChecked) getString(R.string.masculino) else getString(
+                        R.string.femenino
+                    )
 
-            infoTextView.text = getString(R.string.info, nombre, estatura, genero, poderes, ciudadNacimiento)
+                if (fuerzaCheckBox.isChecked) poderes = getString(R.string.super_fuerza)
+                if (velocidadCheckBox.isChecked) poderes =
+                    poderes + " " + getString(R.string.velocidad)
+                if (telequinesisCheckBox.isChecked) poderes =
+                    poderes + " " + getString(R.string.telequinesis)
+
+                infoTextView.text =
+                    getString(R.string.info, nombre, estatura, genero, poderes, ciudadNacimiento)
+
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("nombre",nombre)
+                startActivity(intent)
+
+            }
         }
 
     }
