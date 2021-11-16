@@ -8,8 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 
 class RegistroSuperheroeActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("Método","onCreate")
         setContentView(R.layout.activity_registro_superheroe)
 
         val registrarButton: Button = findViewById(R.id.registrar_button)
@@ -32,12 +34,12 @@ class RegistroSuperheroeActivity : AppCompatActivity() {
                 Toast.makeText(this,"Debe digitar el nombre y la estatura",Toast.LENGTH_LONG).show()
             else {
                 val nombre: String = nombreEditText.text.toString()
+
                 val estatura: Float = estaturaEditText.text.toString().toFloat()
                 var poderes = ""
                 val ciudadNacimiento = ciudadNacimientoSpinner.selectedItem.toString()
 
-                val genero =
-                    if (masculinoRadioButton.isChecked) getString(R.string.masculino) else getString(
+                val genero = if (masculinoRadioButton.isChecked) getString(R.string.masculino) else getString(
                         R.string.femenino
                     )
 
@@ -50,12 +52,43 @@ class RegistroSuperheroeActivity : AppCompatActivity() {
                 infoTextView.text =
                     getString(R.string.info, nombre, estatura, genero, poderes, ciudadNacimiento)
 
+                val superheroe = Superheroe(nombre, estatura, poderes, ciudadNacimiento, genero)
+
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("nombre",nombre)
                 startActivity(intent)
 
             }
         }
+    }
 
+    override fun onStart() {
+        super.onStart()
+        Log.d("Método","onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("Método","onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("Método","onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("Método","onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("Método","onDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("Método","onRestart")
     }
 }
