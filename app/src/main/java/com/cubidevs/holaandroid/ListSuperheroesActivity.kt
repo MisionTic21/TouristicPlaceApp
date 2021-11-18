@@ -20,15 +20,7 @@ class ListSuperheroesActivity : AppCompatActivity() {
         superHeroesRecyclerView = findViewById(R.id.superheroes_recycler_view)
 
         listSuperheroes = createMockSuperHeroes()
-
         superHeroesAdapter = SuperHeroesAdapter(listSuperheroes)
-
-     /*   superHeroesRecyclerView.addItemDecoration(
-            DividerItemDecoration(
-                this,
-                DividerItemDecoration.VERTICAL
-            )
-        )*/
 
         superHeroesRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
