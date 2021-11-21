@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
@@ -27,14 +28,22 @@ class SuperHeroesAdapter(
 
     class SuperheroeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
+        private var ubicacionTextView: TextView = itemView.findViewById(R.id.ubicacion_text_view)
+        private var temperaturaTextView: TextView = itemView.findViewById(R.id.temperatura_text_view)
+        private var recomendadosTextView: TextView = itemView.findViewById(R.id.recomendados_text_view)
+        private var scoreRating: RatingBar = itemView.findViewById(R.id.calificacion_ratingBar)
         private var nameTextView: TextView = itemView.findViewById(R.id.name_text_view)
-        private var aliasTextView: TextView = itemView.findViewById(R.id.alias_text_view)
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_image_view)
 
         fun bind(superheroe: TurismoItem){
             Log.d("nombre",superheroe.name)
             nameTextView.text = superheroe.name
-            aliasTextView.text = superheroe.heigth
+            ubicacionTextView.text = superheroe.description
+            temperaturaTextView.text=superheroe.time
+            recomendadosTextView.text=superheroe.description
+            scoreRating.rating=superheroe.score.toFloat()
+            scoreRating.refreshDrawableState()
+
             Picasso.get().load(superheroe.urlPicture).into(pictureImageView)
         }
     }
