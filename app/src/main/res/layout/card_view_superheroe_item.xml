@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/picture_image_view"
+                android:layout_width="137dp"
+                android:layout_height="243dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@null"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ubicacion_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.091"
+                app:srcCompat="@drawable/superman" />
+
+            <TextView
+                android:id="@+id/name_text_view"
+                style="@style/Texto_titulo"
+                android:layout_width="235dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="2dp"
+                android:lines="4"
+                android:text="@string/superman"
+                app:autoSizeMaxTextSize="14dp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/picture_image_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ubicacion_text_view"
+                style="@style/Texto_normal"
+                android:layout_width="171dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:lines="10"
+                android:maxLines="5"
+                android:text="@string/nombre_superman"
+                android:verticalScrollbarPosition="right"
+                app:autoSizeMaxTextSize="14dp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/picture_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/calificacion_ratingBar" />
+
+            <TextView
+                android:id="@+id/temperatura_text_view"
+                style="@style/Texto_normal2"
+                android:layout_width="223dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+
+                android:lines="10"
+                android:maxLines="5"
+
+                android:text="TextView"
+                app:autoSizeMaxTextSize="14dp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/picture_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/recomendados_text_view" />
+
+            <TextView
+                android:id="@+id/recomendados_text_view"
+                style="@style/Texto_normal1"
+                android:layout_width="220dp"
+                android:layout_height="86dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:lines="10"
+                android:maxLines="5"
+
+                android:text="TextView"
+                app:autoSizeMaxTextSize="14dp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/picture_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/ubicacion_text_view" />
+
+            <RatingBar
+                android:id="@+id/calificacion_ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="172dp"
+                android:background="#92B9F4F4"
+                android:max="5"
+
+                android:numStars="5"
+                android:rating="3"
+                app:layout_constraintBottom_toTopOf="@+id/ubicacion_text_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/picture_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/name_text_view"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
