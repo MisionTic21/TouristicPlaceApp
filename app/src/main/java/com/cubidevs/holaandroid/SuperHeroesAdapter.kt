@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 class SuperHeroesAdapter(
-    private val superheroesList: ArrayList<SuperheroeItem>
+    private val superheroesList: ArrayList<TurismoItem>
 ) : RecyclerView.Adapter<SuperHeroesAdapter.SuperheroeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuperheroeViewHolder {
@@ -31,10 +31,10 @@ class SuperHeroesAdapter(
         private var aliasTextView: TextView = itemView.findViewById(R.id.alias_text_view)
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_image_view)
 
-        fun bind(superheroe: SuperheroeItem){
+        fun bind(superheroe: TurismoItem){
             Log.d("nombre",superheroe.name)
             nameTextView.text = superheroe.name
-            aliasTextView.text = superheroe.alias
+            aliasTextView.text = superheroe.heigth
             Picasso.get().load(superheroe.urlPicture).into(pictureImageView)
         }
     }
