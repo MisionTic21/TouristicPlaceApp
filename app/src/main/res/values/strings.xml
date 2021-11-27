@@ -23,4 +23,6 @@
     <string name="superman">Superman</string>
     <string name="telequinesis">Telequinesis</string>
     <string name="velocidad">Super velocidad</string>
+    <string name="ciudad" />
+    <string name="ciudad_turismo">TURBACO</string>
 </resources>

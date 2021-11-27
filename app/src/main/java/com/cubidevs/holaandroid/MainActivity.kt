@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         val tituloTextView : TextView = findViewById(R.id.titulo_text_view)
 
         val nombre = intent.extras?.getString("nombre")
-        tituloTextView.text = nombre
+      //  tituloTextView.text = nombre
 
-        nombre?.let { Log.d("nombre", it) }
+       // nombre?.let { Log.d("nombre", it) }
     }
 
     override fun onBackPressed() {
