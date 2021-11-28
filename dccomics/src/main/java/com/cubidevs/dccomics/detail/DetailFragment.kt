@@ -34,13 +34,11 @@ class DetailFragment : Fragment() {
         val superheroe = args.superheroe
 
         with(detailBinding){
-            nameTextView.text = superheroe.name
-            aliasTextView.text = superheroe.alias
-            cityTextView.text = superheroe.city
-            occupationTextView.text = superheroe.occupation
-            heightTextView.text = superheroe.height.toString()
-            facebookTextView.text = superheroe.facebook
-            powersTextView.text = superheroe.powers
+            tituloTextView.text = superheroe.name
+            descripcionTextview.text = superheroe.alias
+            nombreTextview.text = superheroe.city
+            alturaTextview.text = superheroe.occupation
+            timeTextview.text = superheroe.height.toString()
             com.squareup.picasso.Picasso.get().load(superheroe.urlPicture).into(pictureImageView)
         }
     }

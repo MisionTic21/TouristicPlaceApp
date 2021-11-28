@@ -25,4 +25,13 @@
     <string name="velocidad">Super velocidad</string>
     <string name="ciudad" />
     <string name="ciudad_turismo">TURBACO</string>
+    <string name="alias">alias</string>
+    <string name="city">city</string>
+    <string name="metropolis">metropolis</string>
+    <string name="occupation">occupation</string>
+    <string name="reporter">reporter</string>
+    <string name="height">height</string>
+    <string name="height_example">heigth_example</string>
+    <string name="facebook">facebook</string>
+    <string name="facebook_example">facebook_example</string>
 </resources>
