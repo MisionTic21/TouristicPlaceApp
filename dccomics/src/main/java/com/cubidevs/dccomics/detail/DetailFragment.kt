@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.cubidevs.dccomics.databinding.FragmentDetailBinding
 import com.cubidevs.dccomics.main.MainActivity
@@ -40,6 +41,10 @@ class DetailFragment : Fragment() {
             alturaTextview.text = superheroe.occupation
             timeTextview.text = superheroe.height.toString()
             com.squareup.picasso.Picasso.get().load(superheroe.urlPicture).into(pictureImageView)
+
+            mapButton.setOnClickListener {
+                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment(superheroeItem=superheroe))
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.cubidevs.dccomics.mapas
+package com.cubidevs.dccomics
 
 import androidx.fragment.app.Fragment
 
@@ -6,16 +6,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.cubidevs.dccomics.R
+import androidx.navigation.fragment.navArgs
 
 import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 class MapsFragment : Fragment() {
-
+    private val args :MapsFragment by navArgs()
     private val callback = OnMapReadyCallback { googleMap ->
         /**
          * Manipulates the map once available.
@@ -26,9 +27,15 @@ class MapsFragment : Fragment() {
          * install it inside the SupportMapFragment. This method will only be triggered once the
          * user has installed Google Play services and returned to the app.
          */
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val superheroe = args.superheroe
+        val poi = LatLng(6.2428525, -75.5835155)
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(poi)
+                .title("Aqui vive Superman")
+                .snippet("Medellin"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(poi,15F))
+
     }
 
     override fun onCreateView(

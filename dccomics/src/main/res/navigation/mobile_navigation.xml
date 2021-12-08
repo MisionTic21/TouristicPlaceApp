@@ -25,9 +25,21 @@
         <argument
             android:name="superheroe"
             app:argType="com.cubidevs.dccomics.model.SuperheroeItem" />
+        <action
+            android:id="@+id/action_navigation_detail_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_preference"
         android:name="com.cubidevs.dccomics.preference.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.cubidevs.dccomics.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <argument
+            android:name="SuperheroeItem"
+            app:argType="com.cubidevs.dccomics.model.SuperheroeItem" />
+    </fragment>
 </navigation>
