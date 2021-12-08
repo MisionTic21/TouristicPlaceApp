@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">DC Comics</string>
+    <string name="ciudad_nacimiento">Ciudad de Nacimiento</string>
+    <string name="estatura">Estatura</string>
+    <string name="femenino">Femenino</string>
+    <string name="genero">Género</string>
+    <string name="info">"Nombre: %s,\n estatura: %f,\n género: %s,\n poderes: %s, \ciudad: %s"</string>
+    <string-array name="lista_ciudades">
+        <item>Ciudad Central</item>
+        <item>Ciudad Gótica</item>
+        <item>Temiscira</item>
+        <item>Metrópolis</item>
+    </string-array>
+    <string name="masculino">Masculino</string>
+    <string name="nombre">Nombre:</string>
+    <string name="nombre_superman">Clark Kent</string>
+    <string name="poderes">Poderes:</string>
+    <string name="poderes_superman">Super fuerza, vuelo, invulnerabilidad, super velocidad, visión con calor, congelar, visión rayos x"</string>
+    <string name="registrar">Registrar</string>
+    <string name="registro">Registro de un Superhoreo</string>
+    <string name="super_fuerza">Super Fuerza</string>
+    <string name="superman">Superman</string>
+    <string name="telequinesis">Telequinesis</string>
+    <string name="velocidad">Super velocidad</string>
+    <string name="alias">Alias</string>
+    <string name="city">Ciudad</string>
+    <string name="metropolis">Metropolis</string>
+    <string name="occupation">Ocupación</string>
+    <string name="reporter">Reportero</string>
+    <string name="height">Altura</string>
+    <string name="height_example">1.85</string>
+    <string name="facebook">Facebook</string>
+    <string name="facebook_example">facebook.com/superman</string>
+</resources>

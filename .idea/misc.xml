@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/CICLO4/turismo - copia/app/src/main/res/layout/activity_detalle.xml" value="0.33" />
+        <entry key="..\:/CICLO4/turismo - copia/app/src/main/res/layout/activity_list_superheroes.xml" value="0.20416666666666666" />
+        <entry key="..\:/CICLO4/turismo - copia/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/CICLO4/turismo - copia/app/src/main/res/layout/activity_registro_superheroe.xml" value="0.20416666666666666" />
+        <entry key="..\:/CICLO4/turismo - copia/app/src/main/res/layout/card_view_superheroe_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/layout/activity_bottom.xml" value="0.10416666666666667" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/layout/activity_drawer.xml" value="0.10416666666666667" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/layout/activity_main.xml" value="0.10416666666666667" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/layout/card_view_superheroe_item.xml" value="0.44764795144157815" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/layout/content_drawer.xml" value="0.10416666666666667" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/layout/fragment_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/layout/fragment_list.xml" value="0.10416666666666667" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/menu/activity_main_drawer.xml" value="0.10416666666666667" />
+        <entry key="..\:/CICLO4/turismo - copia/dccomics/src/main/res/xml/root_preferences.xml" value="0.10416666666666667" />
+        <entry key="..\:/CICLO4/turismo/app/src/main/res/layout/activity_list_superheroes.xml" value="0.1" />
+        <entry key="..\:/CICLO4/turismo/app/src/main/res/layout/activity_main.xml" value="0.3466666666666667" />
+        <entry key="..\:/CICLO4/turismo/app/src/main/res/layout/activity_registro_superheroe.xml" value="0.2046875" />
+        <entry key="..\:/CICLO4/turismo/app/src/main/res/layout/card_view_superheroe_item.xml" value="0.33660589060308554" />
+        <entry key="..\:/CICLO4/turismo/dccomics/src/main/res/layout/card_view_superheroe_item.xml" value="0.33" />
+        <entry key="..\:/CICLO4/turismo/dccomics/src/main/res/layout/fragment_list.xml" value="0.1234375" />
+        <entry key="..\:/CICLO4/turismo/dccomics/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

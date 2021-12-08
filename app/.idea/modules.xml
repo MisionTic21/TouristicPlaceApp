@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HolaAndroid.iml" filepath="$PROJECT_DIR$/.idea/modules/HolaAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HolaAndroid.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HolaAndroid.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dccomics/HolaAndroid.dccomics.iml" filepath="$PROJECT_DIR$/.idea/modules/dccomics/HolaAndroid.dccomics.iml" />
+    </modules>
+  </component>
+</project>
