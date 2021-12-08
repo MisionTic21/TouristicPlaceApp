@@ -9,11 +9,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cubidevs.dccomics.R
 import com.cubidevs.dccomics.model.SuperheroeItem
+import com.cubidevs.dccomics.model.TurismoItem
 import com.squareup.picasso.Picasso
 
 class SuperHeroesAdapter(
-    private val superheroesList: ArrayList<SuperheroeItem>,
-    private val onItemClicked: (SuperheroeItem) -> Unit
+  //  private val superheroesList: ArrayList<SuperheroeItem>,
+ //   private val onItemClicked: (SuperheroeItem) -> Unit
+    private val superheroesList: ArrayList<TurismoItem>,
+    private val onItemClicked: (TurismoItem) -> Unit
+
+
 ) : RecyclerView.Adapter<SuperHeroesAdapter.SuperheroeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuperheroeViewHolder {
@@ -22,14 +27,18 @@ class SuperHeroesAdapter(
     }
 
     override fun onBindViewHolder(holder: SuperheroeViewHolder, position: Int) {
-        val superheroe = superheroesList[position]
+     //   val superheroe = superheroesList[position]
+        val turismo = superheroesList[position]
         holder.itemView.setOnClickListener { onItemClicked(superheroesList[position]) }
-        holder.bind(superheroe)
+      //  holder.bind(superheroe)
+          holder.bind(turismo)
     }
 
     override fun getItemCount(): Int = superheroesList.size
 
-    fun appendItems(newItems: ArrayList<SuperheroeItem>) {
+   // fun appendItems(newItems: ArrayList<SuperheroeItem>) {
+
+    fun appendItems(newItems: ArrayList<TurismoItem>) {
         superheroesList.clear()
         superheroesList.addAll(newItems)
         notifyDataSetChanged()
@@ -41,11 +50,12 @@ class SuperHeroesAdapter(
         private var aliasTextView: TextView = itemView.findViewById(R.id.alias_text_view)
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_image_view)
 
-        fun bind(superheroe: SuperheroeItem){
-            Log.d("nombre",superheroe.name)
-            nameTextView.text = superheroe.name
-            aliasTextView.text = superheroe.alias
-            Picasso.get().load(superheroe.urlPicture).into(pictureImageView)
+      //  fun bind(superheroe: SuperheroeItem){
+          fun bind(turismo: TurismoItem){
+            Log.d("nombre",turismo.name)
+            nameTextView.text = turismo.name
+            aliasTextView.text = turismo.description
+            Picasso.get().load(turismo.urlPicture).into(pictureImageView)
         }
     }
 }

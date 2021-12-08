@@ -23,8 +23,10 @@
         android:label="@string/title_detail"
         tools:layout="@layout/fragment_detail">
         <argument
-            android:name="superheroe"
-            app:argType="com.cubidevs.dccomics.model.SuperheroeItem" />
+            android:name="turismo"
+            app:argType="com.cubidevs.dccomics.model.TurismoItem" />
+
+
         <action
             android:id="@+id/action_navigation_detail_to_mapsFragment"
             app:destination="@id/mapsFragment" />
