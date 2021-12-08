@@ -1,37 +1,42 @@
 package com.cubidevs.dccomics.list
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cubidevs.dccomics.databinding.FragmentListBinding
 import com.cubidevs.dccomics.main.MainActivity
-import com.cubidevs.dccomics.model.Superheroe
 import com.cubidevs.dccomics.model.SuperheroeItem
-import com.google.gson.Gson
 
 class ListFragment : Fragment() {
 
     private lateinit var listBinding: FragmentListBinding
+    private lateinit var listViewModel: ListViewModel
     private lateinit var superHeroesAdapter: SuperHeroesAdapter
-    private lateinit var listSuperheroes: ArrayList<SuperheroeItem>
+    private var listSuperheroes: ArrayList<SuperheroeItem> = arrayListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         listBinding = FragmentListBinding.inflate(inflater, container, false)
-
+        listViewModel = ViewModelProvider(this)[ListViewModel::class.java]
         return listBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity?)?.hideIcon()
-        listSuperheroes = loadMockSuperHeroesFromJson()
+        listViewModel.loadMockSuperHeroesFromJson(context?.assets?.open("superheroes.json"))
+
+        listViewModel.onSuperheroesLoaded.observe(viewLifecycleOwner, { result ->
+            onSuperheroesLoadedSubscribe(result)
+        })
+
         superHeroesAdapter = SuperHeroesAdapter(listSuperheroes, onItemClicked = { onSuperheroeClicked(it) } )
 
         listBinding.superheroesRecyclerView.apply {
@@ -39,17 +44,20 @@ class ListFragment : Fragment() {
             adapter = superHeroesAdapter
             setHasFixedSize(false)
         }
+    }
 
+    private fun onSuperheroesLoadedSubscribe(result: ArrayList<SuperheroeItem>?) {
+        result?.let { listSuperheroes ->
+            superHeroesAdapter.appendItems(listSuperheroes)
+            /*
+            // TODO: revisar feedback
+            this.listSuperheroes = listSuperheroes
+            superHeroesAdapter.notifyDataSetChanged()
+            */
+        }
     }
 
     private fun onSuperheroeClicked(superheroe: SuperheroeItem) {
        findNavController().navigate(ListFragmentDirections.actionListFragmentToDetailFragment(superheroe = superheroe))
-    }
-
-    private fun loadMockSuperHeroesFromJson(): ArrayList<SuperheroeItem> {
-        val superHeroesString: String = context?.assets?.open("superheroes.json")?.bufferedReader().use { it!!.readText() } //TODO reparar !!
-        val gson = Gson()
-        val superHeroesList = gson.fromJson(superHeroesString, Superheroe::class.java)
-        return superHeroesList
     }
 }

@@ -6,7 +6,8 @@
         "city": "Metropolis",
         "facebook": "https: //www.facebook.com/superman",
         "occupation": "Reporter",
-        "urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455673/obelisco_qzatfg.jpg"
+        "height": 1.85,
+        "urlPicture": "https://res.cloudinary.com/dpfhmcj7d/image/upload/v1637326013/superman_xhax4s.jpg"
     },
     {
         "name": "Batman",
@@ -15,6 +16,7 @@
         "city": "Gotham",
         "facebook": "https: //www.facebook.com/batman",
         "occupation": "CEO of Wayne Enterprises",
+        "height": 1.80,
         "urlPicture": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Batman_20190116_5c3fc4b40faec2.47318964.jpg"
     },
     {
@@ -24,6 +26,7 @@
         "city": "Temiscira",
         "facebook": "https: //www.facebook.com/wonderwoman",
         "occupation": "Secretary",
+        "height": 1.80,
         "urlPicture": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_WonderWoman_20190116_5c3fc6aa51d0e3.49076914.jpg"
     },
     {
@@ -33,6 +36,7 @@
         "city": "Central City",
         "facebook": "https: //www.facebook.com/theflash",
         "occupation": "Forensic scientist",
+        "height": 1.70,
         "urlPicture": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_Flash_20190116_5c3fcaaa18f0e8.03668117.jpg"
     },
     {
@@ -42,6 +46,7 @@
         "city": "Coast City",
         "facebook": "",
         "occupation": "Test pilot",
+        "height": 1.73,
         "urlPicture": "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/Char_Profile_GreenLantern_20200721_5f173ad01724e2.92436411.jpg"
     }
 ]

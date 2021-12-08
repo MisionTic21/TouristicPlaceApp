@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_list"
         android:name="com.cubidevs.dccomics.list.ListFragment"
-        android:label="fragment_list"
+        android:label="@string/title_list"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
@@ -20,14 +20,22 @@
     <fragment
         android:id="@+id/navigation_detail"
         android:name="com.cubidevs.dccomics.detail.DetailFragment"
-        android:label="DetailFragment"
+        android:label="@string/title_detail"
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="superheroe"
             app:argType="com.cubidevs.dccomics.model.SuperheroeItem" />
+        <action
+            android:id="@+id/action_navigation_detail_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_preference"
         android:name="com.cubidevs.dccomics.preference.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="@string/title_preference" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.cubidevs.dccomics.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>

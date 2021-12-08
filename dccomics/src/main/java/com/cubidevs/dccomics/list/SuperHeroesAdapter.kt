@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cubidevs.dccomics.R
@@ -24,33 +23,28 @@ class SuperHeroesAdapter(
 
     override fun onBindViewHolder(holder: SuperheroeViewHolder, position: Int) {
         val superheroe = superheroesList[position]
-
         holder.itemView.setOnClickListener { onItemClicked(superheroesList[position]) }
         holder.bind(superheroe)
     }
 
-    override fun getItemCount():Int{
-        Log.d("size item",superheroesList.size.toString())
-        return superheroesList.size
+    override fun getItemCount(): Int = superheroesList.size
+
+    fun appendItems(newItems: ArrayList<SuperheroeItem>) {
+        superheroesList.clear()
+        superheroesList.addAll(newItems)
+        notifyDataSetChanged()
     }
-
-
 
     class SuperheroeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-
-
-        private var nameTextView: TextView = itemView.findViewById(R.id.titulo_text_view)
-        private var aliasTextView: TextView = itemView.findViewById(R.id.nombre_textview)
-        private var calificacion_ratingBar: RatingBar = itemView.findViewById(R.id.calificacion_ratingBar)
+        private var nameTextView: TextView = itemView.findViewById(R.id.name_text_view)
+        private var aliasTextView: TextView = itemView.findViewById(R.id.alias_text_view)
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_image_view)
 
         fun bind(superheroe: SuperheroeItem){
             Log.d("nombre",superheroe.name)
             nameTextView.text = superheroe.name
-            aliasTextView.text = superheroe.city
-            calificacion_ratingBar.rating = superheroe.score.toFloat()
-            calificacion_ratingBar.refreshDrawableState()
+            aliasTextView.text = superheroe.alias
             Picasso.get().load(superheroe.urlPicture).into(pictureImageView)
         }
     }

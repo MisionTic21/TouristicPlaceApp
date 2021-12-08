@@ -12,15 +12,13 @@ data class SuperheroeItem(
     @SerializedName("facebook")
     val facebook: String,
     @SerializedName("height")
-    val height: String,
+    val height: Double,
     @SerializedName("name")
     val name: String,
     @SerializedName("occupation")
     val occupation: String,
     @SerializedName("powers")
     val powers: String,
-    @SerializedName("score")
-    val score: Float,
     @SerializedName("urlPicture")
     val urlPicture: String
 ) : Serializable

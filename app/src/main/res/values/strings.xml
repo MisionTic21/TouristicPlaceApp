@@ -23,15 +23,13 @@
     <string name="superman">Superman</string>
     <string name="telequinesis">Telequinesis</string>
     <string name="velocidad">Super velocidad</string>
-    <string name="ciudad" />
-    <string name="ciudad_turismo">TURBACO</string>
-    <string name="alias">alias</string>
-    <string name="city">city</string>
-    <string name="metropolis">metropolis</string>
-    <string name="occupation">occupation</string>
-    <string name="reporter">reporter</string>
-    <string name="height">height</string>
-    <string name="height_example">heigth_example</string>
-    <string name="facebook">facebook</string>
-    <string name="facebook_example">facebook_example</string>
+    <string name="alias">Alias</string>
+    <string name="city">Ciudad</string>
+    <string name="metropolis">Metropolis</string>
+    <string name="occupation">Ocupación</string>
+    <string name="reporter">Reportero</string>
+    <string name="height">Altura</string>
+    <string name="height_example">1.85</string>
+    <string name="facebook">Facebook</string>
+    <string name="facebook_example">facebook.com/superman</string>
 </resources>

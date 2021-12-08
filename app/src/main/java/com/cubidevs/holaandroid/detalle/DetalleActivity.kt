@@ -18,7 +18,13 @@ class DetalleActivity : AppCompatActivity() {
         val superheroe: SuperheroeItem = intent.extras?.getSerializable("superheroe") as SuperheroeItem
 
         with(detalleBinding){
-
+            nameTextView.text = superheroe.name
+            aliasTextView.text = superheroe.alias
+            cityTextView.text = superheroe.city
+            occupationTextView.text = superheroe.occupation
+            heightTextView.text = superheroe.height.toString()
+            facebookTextView.text = superheroe.facebook
+            powersTextView.text = superheroe.powers
             Picasso.get().load(superheroe.urlPicture).into(pictureImageView)
         }
     }
