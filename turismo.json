@@ -8,8 +8,8 @@
 			"time": "24 °C, viento del NE a 10 km/h, humedad del 90 %",
 			"score": "4",
 			"urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455673/obelisco_qzatfg.jpg",
-			"latitud": "10.3297714",
-			"longitud": "-75.3778139"
+			"latitud": 10.3297714,
+			"longitud": -75.3778139
 
 		},
 		{
@@ -19,8 +19,8 @@
 			"time": "25 °C, viento del NE a 10 km/h, humedad del 90 %",
 			"score": "4",
 			"urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455669/jardin_botanico_p0szms.jpg",
-			"latitud": "10.3445335",
-			"longitud": "-75.4275856"
+			"latitud": 10.3445335,
+			"longitud": -75.4275856
 
 		},
 		{
@@ -30,8 +30,8 @@
 			"time": "26 °C, viento del NE a 10 km/h, humedad del 90 %",
 			"score": "4",
 			"urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455662/hotel_hbf4zx.jpg",
-			"latitud": "10.3293538",
-			"longitud": "-75.4072082"
+			"latitud": 10.3293538,
+			"longitud": -75.4072082
 
 		},
 		{
@@ -41,8 +41,8 @@
 			"time": "27 °C, viento del NE a 10 km/h, humedad del 90 %",
 			"score": "4",
 			"urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455678/parroquia_hlpg1z.jpg",
-			"latitud": "10.329473",
-			"longitud": "-75.408105"
+			"latitud": 10.329473,
+			"longitud": -75.408105
 
 		},
 		{
@@ -52,8 +52,8 @@
 			"time": "28 °C, viento del NE a 10 km/h, humedad del 90 %",
 			"score": "4",
 			"urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455678/parroquia_hlpg1z.jpg",
-			"latitud": "10.352823",
-			"longitud": "-75.428681"
+			"latitud": 10.352823,
+			"longitud": -75.428681
 
 		},
 		{
@@ -63,8 +63,8 @@
 			"time": "29 °C, viento del NE a 10 km/h, humedad del 90 %",
 			"score": "4",
 			"urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455678/parroquia_hlpg1z.jpg",
-			"latitud": "10.315277",
-			"longitud": "-75.401711"
+			"latitud": 10.315277,
+			"longitud": -75.401711
 
 		},
 		{
@@ -74,8 +74,8 @@
 			"time": "30 °C, viento del NE a 10 km/h, humedad del 90 %",
 			"score": "4",
 			"urlPicture": "https://res.cloudinary.com/yamcok/image/upload/v1637455678/parroquia_hlpg1z.jpg",
-			"latitud": "10.353333",
-			"longitud": "-75.433058"
+			"latitud": 10.353333,
+			"longitud":-75.433058
 
 		}
 	]
