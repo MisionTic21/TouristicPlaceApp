@@ -35,21 +35,21 @@
             />
 
         <activity
-            android:name=".tabbed.TabbedActivity"
+            android:name="com.cubidevs.dccomics.ui.tabbed.TabbedActivity"
             android:exported="true"
             android:label="@string/title_activity_tabbed"
             android:theme="@style/Theme.HolaAndroid.NoActionBar" />
         <activity
-            android:name=".drawer.DrawerActivity"
+            android:name="com.cubidevs.dccomics.ui.drawer.DrawerActivity"
             android:exported="true"
             android:label="@string/title_activity_drawer"
             android:theme="@style/Theme.HolaAndroid.NoActionBar" />
         <activity
-            android:name=".bottom.BottomActivity"
+            android:name="com.cubidevs.dccomics.ui.bottom.BottomActivity"
             android:exported="true"
             android:label="@string/title_activity_bottom" />
         <activity
-            android:name=".main.MainActivity"
+            android:name="com.cubidevs.dccomics.ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
