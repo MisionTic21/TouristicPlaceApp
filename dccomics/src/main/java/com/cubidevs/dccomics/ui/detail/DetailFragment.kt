@@ -38,13 +38,15 @@ class DetailFragment : Fragment() {
         val turismo = args.turismo
 
         with(detailBinding){
-            nameTextView.text = turismo.name
-            aliasTextView.text = turismo.description
-            cityTextView.text = turismo.height.toString()
-            occupationTextView.text = turismo.time
+            nombreTextview.text = turismo.name
+            descripcionTextview.text = turismo.description
+            alturaTextview.text = turismo.height.toString()
+            timeTextview.text = turismo.time
 //            heightTextView.text = turismo.height.toString()
-            facebookTextView.text = turismo.name
-            powersTextView.text = turismo.name
+
+            calificacionRatingBar.rating=turismo.score.toFloat()
+            calificacionRatingBar.refreshDrawableState()
+
             Picasso.get().load(turismo.urlPicture).into(pictureImageView)
 
             mapButton.setOnClickListener {

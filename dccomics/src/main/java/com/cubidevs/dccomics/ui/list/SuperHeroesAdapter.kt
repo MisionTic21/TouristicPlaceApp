@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.cubidevs.dccomics.R
@@ -46,15 +47,21 @@ class SuperHeroesAdapter(
 
     class SuperheroeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        private var nameTextView: TextView = itemView.findViewById(R.id.name_text_view)
-        private var aliasTextView: TextView = itemView.findViewById(R.id.alias_text_view)
+        private var nameTextView: TextView = itemView.findViewById(R.id.nombre_textview)
+        private var aliasTextView: TextView = itemView.findViewById(R.id.altura_textview)
+        private var tiempoTextview: TextView = itemView.findViewById(R.id.time_textview)
+        private var calificacionRatingBar: RatingBar = itemView.findViewById(R.id.calificacion_ratingBar )
         private var pictureImageView: ImageView = itemView.findViewById(R.id.picture_image_view)
 
       //  fun bind(superheroe: SuperheroeItem){
           fun bind(turismo: TurismoItem){
             Log.d("nombre",turismo.name)
             nameTextView.text = turismo.name
-            aliasTextView.text = turismo.description
+            aliasTextView.text = turismo.height
+            tiempoTextview.text=turismo.time
+            calificacionRatingBar.rating=turismo.score.toFloat()
+            calificacionRatingBar.refreshDrawableState()
+
             Picasso.get().load(turismo.urlPicture).into(pictureImageView)
         }
     }

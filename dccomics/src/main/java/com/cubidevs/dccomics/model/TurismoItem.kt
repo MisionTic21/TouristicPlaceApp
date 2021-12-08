@@ -12,7 +12,7 @@ data class TurismoItem(
     @SerializedName("name")
     val name: String,
     @SerializedName("score")
-    val score: Integer,
+    val score: Int,
     @SerializedName("time")
     val time: String,
     @SerializedName("urlPicture")
