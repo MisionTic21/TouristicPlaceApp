@@ -35,22 +35,24 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //val superheroe = args.superheroe
+
         val turismo = args.turismo
+
 
         with(detailBinding){
             nombreTextview.text = turismo.name
             descripcionTextview.text = turismo.description
             alturaTextview.text = turismo.height.toString()
             timeTextview.text = turismo.time
-//            heightTextView.text = turismo.height.toString()
+//           heightTextView.text = turismo.height.toString()
 
             calificacionRatingBar.rating=turismo.score.toFloat()
             calificacionRatingBar.refreshDrawableState()
-
             Picasso.get().load(turismo.urlPicture).into(pictureImageView)
 
+
             mapButton.setOnClickListener {
-                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment())
+                findNavController().navigate(DetailFragmentDirections.actionNavigationDetailToMapsFragment(turismo))
             }
         }
     }

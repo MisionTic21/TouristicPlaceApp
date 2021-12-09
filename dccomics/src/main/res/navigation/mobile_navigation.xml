@@ -39,5 +39,10 @@
         android:id="@+id/mapsFragment"
         android:name="com.cubidevs.dccomics.maps.MapsFragment"
         android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+        tools:layout="@layout/fragment_maps">
+    <argument
+        android:name="turismo"
+        app:argType="com.cubidevs.dccomics.model.TurismoItem" />
+
+    </fragment>
 </navigation>
