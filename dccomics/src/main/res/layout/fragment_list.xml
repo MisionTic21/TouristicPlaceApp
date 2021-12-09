@@ -6,13 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".ui.list.ListFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/superheroes_recycler_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/card_view_superheroe_item" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/Texto_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:text="TURBACO" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/superheroes_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/card_view_superheroe_item" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
