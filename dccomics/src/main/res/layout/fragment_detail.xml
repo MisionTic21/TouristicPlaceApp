@@ -211,7 +211,7 @@
 
                 android:layout_marginTop="8dp"
                 android:scaleType="fitXY"
-                app:srcCompat="@drawable/superman"
+                app:srcCompat="@drawable/obelisco"
                 tools:ignore="ContentDescription" />
 
             <TableLayout
@@ -318,15 +318,16 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@null"
+            android:elevation="5dp"
             android:minHeight="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/map"
-            app:srcCompat="@drawable/ic_map"
+            app:layout_constraintTop_toBottomOf="@id/map2"
+            app:srcCompat="@android:drawable/ic_menu_mapmode"
             tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
         <fragment
-            android:id="@+id/map"
+            android:id="@+id/map2"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="0dp"
             android:layout_height="200dp"
@@ -338,7 +339,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearLayout"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0">
+
+        </fragment>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Ampliar"
+            app:layout_constraintEnd_toStartOf="@+id/mapButton"
+            app:layout_constraintTop_toBottomOf="@+id/map2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
